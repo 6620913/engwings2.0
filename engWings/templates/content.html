@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+
+
+  <title>EngWings -> Content</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+
+  <!--header section -->
+  <header>
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">EngWings</a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon " style="color: white;margin-right: 10px;">&#9776;</span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/"> Home</a>
+            <a class="nav-link active" href="/courses"> Courses </a>
+            <a class="nav-link" href="/about"> About</a>
+            <a class="nav-link" href="/contact">Contact us</a>
+
+            {% if user.is_authenticated %}
+            <a class="nav-link" href="">Hello, {{user.first_name}}</a>
+            <a class="nav-link" href="/logout">Logout</a>
+            {% else %}
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/register">Register</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end header section -->
+
+
+
+  <!-- about section -->
+
+  <section>
+    <div class="container">
+
+      <div class="content-head">
+        <h2>
+          {{ctitle.name}}
+        </h2>
+      </div>
+      <div class="content-row">
+
+
+        <div class="item1">
+          <video class="embed-responsive embed-responsive-16by9" controls="controls" autoplay>
+            <source src="{{front.video.url}}" />
+            <h3> {{video.title}}</h3>
+
+          </video>
+
+        </div>
+
+
+
+        <div class="item2">
+          <div class="scroll_bar">
+          
+              {% for i in content %}
+              <div class="OptionContainer">
+                <a href="/front/{{i.id}}/{{i.course_id}}">
+
+
+                  <div class="scrolitem" >
+
+                    <div class="thumb">
+                      <img src="{{i.thumbnail.url}}" alt="">
+                    </div>
+
+                    <div class="disc">
+                      <h5 >{{i.title}}</h5>
+                      <p> {{i.disc}}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+          
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  
+  <!-- footer section -->
+  <footer class="">
+    <div class="footer">
+      <p>
+        &copy; All Rights Reserved By
+        <a href="/">EngWings</a>
+      </p>
+    </div>
+
+  </footer>
+  <!-- footer section -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
