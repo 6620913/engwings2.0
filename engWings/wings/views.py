@@ -81,7 +81,7 @@ def contactform(request):
 
 
     EMAIL_ADDRESS = 'nerthinksjareen@gmail.com'
-    EMAIL_PASSWORD = 'Ironman@12'
+    EMAIL_PASSWORD = 'I will eat sahi paneer today'
 
     msg = EmailMessage()
     msg['Subject'] = 'contacting'

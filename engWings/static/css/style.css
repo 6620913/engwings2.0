@@ -8,7 +8,7 @@
 .navbar{
     background-color: rgb(4, 56, 39);
     box-shadow: 10px 10px 10px 10px gray;
-    
+
 }
 
 .navbar a{
@@ -22,7 +22,7 @@
     background-color: white;
     color: rgb(4, 56, 39);
     padding: 5px 15px;
-    
+
 }
 
 .container{
@@ -33,20 +33,20 @@
 
 
 .intro-row{
-   
-    
+
+
     display: flex;
     flex-direction: row;
     width: auto;
     border-radius: 20px;
-  
-  
-   
+
+
+
 }
 
 
 .intro-video{
-    
+
       margin: 20px;
       width: 50%;
       /* background-color: aliceblue; */
@@ -58,7 +58,7 @@
 .intro-info{
     display: flex;
     align-items: center;
-    
+
     padding: 20px;
     border-radius: 20px;
     margin: 20px;
@@ -85,7 +85,7 @@
 }
 .info a:hover{
     padding:13px 23px
-    
+
 }
 
 @media (max-width:992px) {
@@ -99,7 +99,7 @@
     .intro-info{
         width: 100%;
     }
-    
+
 }
 
 
@@ -113,7 +113,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    
+
 
     /* margin-top: 100px;
     margin-bottom: 100px; */
@@ -123,9 +123,11 @@
 .course-card{
     margin: 20px;
     width: 18rem;
+    height: fit-content;
     box-shadow: 10px 10px 10px  gray;
-    
+
 }
+
 
 @media (max-width:770px){
     .course-card{
@@ -163,8 +165,8 @@ padding: 10px 20px;
 .item1{
     width: 50%;
     margin-top: 30px;
-    
-    
+
+
     box-shadow: 10px 10px 10px gray;
     background-color: black;
     border-radius: 10px;
@@ -187,15 +189,15 @@ padding: 10px 20px;
     border-radius: 5px;
     margin: 30px;
     padding: 10px;
-    
+
 }
 .thumb{
     width: 200px;
     height: 120px;
     margin: 5px;
     border-radius: 10px;
- 
-    
+
+
 }
 .thumb img{
    border-radius: 10px;
@@ -205,7 +207,7 @@ padding: 10px 20px;
 .disc{
 
     margin: 5px;
-   
+
     color: black;
 }
 
@@ -216,7 +218,7 @@ padding: 10px 20px;
     }
     .item1{
         width: 100%;
-        
+
     }
     .item2{
         width: 100%;
@@ -224,7 +226,7 @@ padding: 10px 20px;
     .scrolitem{
         margin-left: 5px;
     }
-    
+
 }
 
 /* end of content page */
@@ -246,7 +248,7 @@ padding: 10px 20px;
 }
 
 .aboutinfo{
-   
+
     text-align: center;
 
     padding: 20px;
@@ -254,7 +256,7 @@ padding: 10px 20px;
     margin: 20px;
     color:black;
     box-shadow: 10px 10px 10px 10px gray;
-    
+
     font-family: Arial, Helvetica, sans-serif;
 
 
@@ -288,7 +290,7 @@ padding: 10px 20px;
     margin: 20px;
     justify-content: center;
     align-items: center;
-    
+
 
 }
 .form-input{
@@ -309,7 +311,7 @@ display: flex;
 justify-content: center;
 margin: 10px;
 
-    
+
 }
 .form-btn button{
     background-color:rgb(4, 56, 39);
@@ -354,9 +356,9 @@ font-weight: bold;
 
 /* footer */
 .footer{
-    
-    
+
+
     margin-top: 100px;
-    
+
     text-align: center;
 }
